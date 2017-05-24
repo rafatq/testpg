@@ -1,0 +1,47 @@
+
+    <div id="add">
+    <div id="error"></div>
+    <div id="addphoto">
+    <form id="form-2" action="php/upload_image.php" method="post" enctype="multipart/form-data">
+    	<p id="add-photo-title"><label>DODAJ ZDJĘCIE (formaty:. jpeg, .gif, .png [max. 6MB]):</label></p>
+		<div><input id="uploadImage" type="file" accept="image/*" name="image" /><input type="hidden" value="" id="image-id" name="imageid" data-role="button"/></div>
+        <div><input type="submit" value="DODAJ ZDJĘCIE" data-role="button" data-icon="arrow-u" id="submitimage"/></div>
+      </form>
+      <div id="load"></div>
+      </div>
+    	<form action="index.php" method="post" enctype="multipart/form-data" id="form-1">
+        <div data-role="fieldcontain">
+        	<fieldset data-role="controlgroup">
+        		<p><label>GPS (*pole wymagane):</label></p>
+            	<div><input type="text" maxlength="200" value="" name="gps" id="gps" /></div>
+                
+            	<p><label>MIEJSCOWOŚĆ:</label></p>
+            	<div><input type="text" maxlength="40" value="" name="place" id="place" /></div>
+                
+            	<p><label>NAZWA POJAZDU / MODEL (*pole wymagane):</label></p>
+            	<div><input type="text" maxlength="100" value="" name="vehicle" id="vehicle" /></div>
+                
+            	<p><label>ROCZNIK (jeżeli wprowadzony, to zakres od 1901 do <?php echo date ('Y'); ?>):</label></p>
+            	<div><input type="text" maxlength="4" value="" name="year" id="year" /></div>
+                
+            	<p><label>CENA(jeżeli wprowadzona, to format: XXXX... lub XXX<span style="color: #F03; font-size: 20px">.</span>XX...):</label></p>
+            	<div><input type="text" maxlength="7" value="" name="price" id="price" /></div>
+                
+            	<p><label>NR REJESTRACYJNY:</label></p>
+            	<div><input type="text" maxlength="20" value="" name="board" id="board" /></div>
+                
+            	<p><label>NR TELEFONU (format XXXXXXXXX [bez spacji]):</label></p>
+            	<div><input type="text" maxlength="14" value="" name="telephone" id="telephone" /></div>
+                
+            	<p><label>OPIS:</label></p>
+            	<div><textarea name="description" id="description" maxlength="700"></textarea></div>
+                
+            </div>
+            <div id="submit-section">
+            	<input type="reset" id="reset" name="reset" value="RESET" data-role="button" data-icon="refresh"/>
+            	<input type="submit" id="submit" value="SEND" name="submit" data-role="button" data-icon="arrow-u"/>
+            </div>
+            </fieldset>
+        </div>
+        </form>
+    </div>
